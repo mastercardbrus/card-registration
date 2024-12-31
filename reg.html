@@ -1,0 +1,18 @@
+<form id="card-form">
+  <label for="card-number">Enter Card Number:</label><br>
+  <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required><br><br>
+  <button type="button" onclick="registerCard()">Register</button>
+</form>
+
+<p id="message" style="display:none; color: green; font-weight: bold;">Card Registered Successfully!</p>
+
+<script>
+  function registerCard() {
+    const cardNumber = document.getElementById("card-number").value;
+    if (cardNumber.trim() === "") {
+      alert("Please enter a card number.");
+      return;
+    }
+    document.getElementById("message").style.display = "block"; // Show the success message
+  }
+</script>
